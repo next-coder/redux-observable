@@ -157,9 +157,6 @@ const store = createStore(
   applyMiddleware(epicMiddleware1, epicMiddleware2)
 );
 
-epicMiddleware1.replaceEpic(rootEpic2);
-epicMiddleware2.replaceEpic(rootEpic1);
-
 store.dispatch({ type: 'FIRST' });
 store.dispatch({ type: 'SECOND' });
 store.dispatch({ type: 'FIFTH', payload: 'fifth-payload' });

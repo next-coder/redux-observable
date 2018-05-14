@@ -43,7 +43,7 @@ export declare interface Epic<T extends Action, S, D = any, O extends T = T> {
 }
 
 export interface EpicMiddleware<T extends Action, S, D = any, O extends T = T> extends Middleware {
-  replaceEpic(nextEpic: Epic<T, S, D, O>): void;
+  run(rootEpic: Epic<T, S, D, O>): void;
 }
 
 interface Adapter {
